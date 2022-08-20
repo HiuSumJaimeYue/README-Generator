@@ -1,11 +1,35 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+// const questions = [];
+
+
+const profileDataArgs = process.argv.slice(2);
+
+const [name, github] = profileDataArgs;
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    // const generatePage = (name, github) => {
+    return `
+    <!DOCTYPE html> 
+    <html lang="en"> 
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Portfolio Demo</title>
+    </head>
+  
+    <body>
+      <h1>${fileName}</h1>
+      <h2><a href="https://github.com/${data}">Github</a></h2>
+    </body>
+    </html>
+    `;
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -124,10 +148,16 @@ function init() {
     };
 
     promptProject()
-        .then(projectInfo => console.log(projectInfo))
+        // .then(projectInfo => console.log(projectInfo))
         .then(promptUser)
         .then(userInfo => console.log(userInfo));
+
 }
 
 // Function call to initialize app
-init();
+// init();
+// fs.writeFile('index.html', writeToFile(name, github), err => {
+//     if (err) throw err;
+
+//     console.log('Portfolio complete! Check out index.html to see the output!');
+// });
