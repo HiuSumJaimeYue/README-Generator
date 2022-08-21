@@ -111,7 +111,9 @@ function init() {
             }
         ])
     }
-    const promptUser = () => {
+    const promptUser = projectData => {
+        // projectData.contactInfo = [];
+
         console.log(`
         =================
         Contact Information
@@ -144,18 +146,22 @@ function init() {
                     }
                 }
             }
-        ]);
+        ]).then(userInfo => {
+            projectData.contactInfo = userInfo;
+            return projectData;
+        });
     };
 
     promptProject()
-        // .then(projectInfo => console.log(projectInfo))
         .then(promptUser)
-        .then(userInfo => console.log(userInfo));
+        .then(projectData => {
+            console.log(projectData);
+        });
 
 }
 
 // Function call to initialize app
-// init();
+init();
 // fs.writeFile('index.html', writeToFile(name, github), err => {
 //     if (err) throw err;
 
