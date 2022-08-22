@@ -13,12 +13,13 @@ author.
 Starter code from https://github.com/coding-boot-camp/potential-enigma       
        
 Github repository: https://github.com/HiuSumJaimeYue/README-Generator           
+Sample README.md created by README Generator: https://github.com/HiuSumJaimeYue/README-Generator/tree/main/Develop#readme       
 Video of demonstration: https://drive.google.com/file/d/1Vw3jDuXp4lhCOWYKELMNt7HKbZ33dDS5/view                 
 
-Screenshots of the  application is included below.   
-Preview     
+Screenshots of the application is included below.   
+Preview                 
 ![README Generator Preview1](web "README-Preview1")  
 ![README Generator Preview2](web "README-Preview2")  
-Raw code
+Raw code            
 ![README Generator Preview3](web "README-Preview3")  
 ![README Generator Preview4](web "README-Preview4")  

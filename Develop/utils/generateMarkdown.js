@@ -93,7 +93,6 @@ If you have any questions about the project,
 the github link and email address of the author are shown below.                   
 Github: [Github](https://github.com/${readmeData.contactInfo.github}) 
 & Email: [${readmeData.contactInfo.email}](mailto:${readmeData.contactInfo.email})
-</a>
 `;
 }
 

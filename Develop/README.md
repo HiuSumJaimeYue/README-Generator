@@ -38,4 +38,3 @@ If you have any questions about the project,
 the github link and email address of the author are shown below.                   
 Github: [Github](https://github.com/HiuSumJaimeYue) 
 & Email: [hiusumjaimeyue@cmail.carleton.ca](mailto:hiusumjaimeyue@cmail.carleton.ca)
-</a>
