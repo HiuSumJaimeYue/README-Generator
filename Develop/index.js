@@ -2,23 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-// const questions = [];
-
-
-// const profileDataArgs = process.argv.slice(2);
-
-// const [name, github] = profileDataArgs;
-
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(fileName, data) {
     const generatePage = readmeData => {
-        // const {contactInfo, ...header} = readmeData;
-        // console.log(header.name);
-        // console.log(header.description);
-        // console.log(header.installationInstructions);
-        // console.log(contactInfo.github);
-    return `
+        return `
     <!DOCTYPE html> 
     <html lang="en"> 
     <head>
@@ -41,48 +28,50 @@ function writeToFile(fileName, data) {
           <h2>Table of Contents</h2>
           <ul>
             <li>
-              <a href="#">Installation</a>
+              <a href="#installation">Installation</a>
             </li>
             <li>
-              <a href="#">Usage</a>
+              <a href="#usage">Usage</a>
             </li>
             <li>
-              <a href="#">License</a>
+              <a href="#license">License</a>
             </li>
             <li>
-              <a href="#">Contributing</a>
+              <a href="#contributing">Contributing</a>
             </li>
             <li>
-              <a href="#">Tests</a>
+              <a href="#tests">Tests</a>
             </li>
             <li>
-              <a href="#">Questions</a>
+              <a href="#questions">Questions</a>
             </li>
           </ul>
         </div>
-        <div>
+        <div id="installation">
           <h2>Installation</h2>
           <p>${readmeData.installationInstructions}</p>
         </div>
-        <div>
+        <div id="usage">
           <h2>Usage</h2>
           <p>${readmeData.usageInformation}</p>
         </div>
-        <div>
+        <div id="license">
           <h2>License</h2>
           <p></p>
         </div>
-        <div>
+        <div id="contributing">
           <h2>Contributing</h2>
           <p>${readmeData.contributionGuidelines}</p>
         </div>
-        <div>
+        <div id="test">
           <h2>Tests</h2>
           <p>${readmeData.testInstructions}</p>
         </div>
-        <div>
+        <div id="questions">
           <h2>Questions</h2>
-          <p>Github: ${readmeData.contactInfo.github} & Email: ${readmeData.contactInfo.email}</p>
+          <p>If you have any questions about the project, 
+          the github link and email address of the author are shown below. </p>
+          <p>Github: <a href="https://github.com/${readmeData.contactInfo.github}">GitHub</a> & Email: ${readmeData.contactInfo.email}</p>
         </div>
       </main>
     </body>
@@ -92,13 +81,13 @@ function writeToFile(fileName, data) {
     }
 
     fs.writeFile(fileName, generatePage(data), err => {
-    if (err) throw err;
+        if (err) throw err;
 
-    console.log('Portfolio complete! Check out index.html to see the output!');
-});
+        console.log('Portfolio complete! Check out index.html to see the output!');
+    });
 }
 
-// TODO: Create a function to initialize app
+//Create a function to initialize app
 function init() {
     const promptProject = () => {
         return inquirer.prompt([
@@ -152,6 +141,11 @@ function init() {
                     }
                 }
             }, {
+                type: 'list',
+                name: 'license',
+                message: 'Choose a license for this project',
+                choices: ['MIT', 'GPL']
+            }, {
                 type: 'input',
                 name: 'contributionGuidelines',
                 message: 'Provide contribution guidelines of the project (Required)',
@@ -179,8 +173,6 @@ function init() {
         ])
     }
     const promptUser = projectData => {
-        // projectData.contactInfo = [];
-
         console.log(`
         =================
         Contact Information
