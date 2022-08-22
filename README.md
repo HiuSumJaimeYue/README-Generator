@@ -1,6 +1,7 @@
 # README-Generator
 
-This repository is for a README Generator application .     
+This repository is for a README Generator application .   
+  
 In the command-line terminal, you can type the name of the project, description, installation instructions, usage information, contribution guidelines, test instructions, your github username and your email address. You can also pick a license for your README.    
 
 A README.md will be created after you finished inputting.                       
@@ -12,4 +13,12 @@ author.
 Starter code from https://github.com/coding-boot-camp/potential-enigma       
        
 Github repository: https://github.com/HiuSumJaimeYue/README-Generator           
-Video of demonstration: 
+Video of demonstration: https://drive.google.com/file/d/1Vw3jDuXp4lhCOWYKELMNt7HKbZ33dDS5/view                 
+
+Screenshots of the  application is included below.   
+Preview     
+![README Generator Preview1](web "README-Preview1")  
+![README Generator Preview2](web "README-Preview2")  
+Raw code
+![README Generator Preview3](web "README-Preview3")  
+![README Generator Preview4](web "README-Preview4")  

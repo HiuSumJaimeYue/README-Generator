@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
     `;
   }
   else if (license == 'Apache 2.0') {
-    return `![Apache2-badge](https://img.shields.io/badge/License-Apache-blue.svg)
+    return `![Apache2-badge](https://img.shields.io/badge/license-Apache%202-blue.svg)
   `;
   }
   else if (license == 'GPL') {
@@ -47,8 +47,7 @@ function renderLicenseSection(license) {
   }
   return ` 
 Licensed under the 
-<a href=${renderLicenseLink(license)} target="_blank" rel="noopener noreferrer">
-${license}</a>
+[${license}](${renderLicenseLink(license)}) 
 license.
 `;
 }
@@ -92,10 +91,8 @@ ${readmeData.testInstructions}
 ## Questions         
 If you have any questions about the project, 
 the github link and email address of the author are shown below.                   
-Github: <a href="https://github.com/${readmeData.contactInfo.github}" 
-target="_blank" rel="noopener noreferrer" >
-GitHub</a> & Email: <a href="mailto:${readmeData.contactInfo.email}">
-${readmeData.contactInfo.email}
+Github: [Github](https://github.com/${readmeData.contactInfo.github}) 
+& Email: [${readmeData.contactInfo.email}](mailto:${readmeData.contactInfo.email})
 </a>
 `;
 }

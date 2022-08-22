@@ -1,9 +1,9 @@
 
-# title · ![MIT-badge](https://img.shields.io/badge/License-MIT-green.svg)
-                  
+# Title · ![Apache2-badge](https://img.shields.io/badge/License-Apache-blue.svg)
+                
 
 ## Description       
-des         
+Description part         
 
 ## Table of Contents               
 -[Installation](#installation)          
@@ -14,31 +14,28 @@ des
 -[Questions](#questions)        
 
 ## Installation         
-ins               
+Installation part               
 
 ## Usage         
-usa
+Usage part
 
 ## License         
-&copy; 2022 by git         
+&copy; 2022 by HiuSumJaimeYue         
  
 Licensed under the 
-<a href=https://choosealicense.com/licenses/mit/ target="_blank" rel="noopener noreferrer">
-MIT</a>
+[Apache 2.0](https://choosealicense.com/licenses/apache-2.0/) 
 license.
          
 
 ## Contributing         
-cg         
+Contribution part         
 
 ## Tests         
-test
+Test part
 
 ## Questions         
 If you have any questions about the project, 
 the github link and email address of the author are shown below.                   
-Github: <a href="https://github.com/git" 
-target="_blank" rel="noopener noreferrer" >
-GitHub</a> & Email: <a href="mailto:email">
-email
+Github: [Github](https://github.com/HiuSumJaimeYue) 
+& Email: [hiusumjaimeyue@cmail.carleton.ca](mailto:hiusumjaimeyue@cmail.carleton.ca)
 </a>
