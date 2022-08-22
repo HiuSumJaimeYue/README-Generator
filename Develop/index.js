@@ -57,7 +57,8 @@ function writeToFile(fileName, data) {
         </div>
         <div id="license">
           <h2>License</h2>
-          <p></p>
+          <p class="text-dark">&copy; ${new Date().getFullYear()} by ${readmeData.contactInfo.github}</p>
+        
         </div>
         <div id="contributing">
           <h2>Contributing</h2>
@@ -75,15 +76,24 @@ function writeToFile(fileName, data) {
         </div>
       </main>
     </body>
-
     </html>
     `;
     }
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, generatePage(data), err => {
+            // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+            if (err) {
+                reject(err);
+                // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                return;
+            }
 
-    fs.writeFile(fileName, generatePage(data), err => {
-        if (err) throw err;
-
-        console.log('Portfolio complete! Check out index.html to see the output!');
+            // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
     });
 }
 
