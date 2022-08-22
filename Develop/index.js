@@ -81,7 +81,7 @@ function init() {
                 type: 'list',
                 name: 'license',
                 message: 'Choose a license for this project',
-                choices: ['MIT', 'Apache 2.0' ,'GPL']
+                choices: ['MIT', 'Apache 2.0', 'GPL']
             }, {
                 type: 'input',
                 name: 'contributionGuidelines',
@@ -153,7 +153,6 @@ function init() {
         .then(readmeData => {
             console.log(readmeData);
             writeToFile('index.html', readmeData);
-            console.log(generateMarkdown(readmeData));
         });
 
 }

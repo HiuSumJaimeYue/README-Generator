@@ -12,14 +12,14 @@ function renderLicenseBadge(license) {
   }
   else if (license == 'Apache 2.0') {
     return `
-    <img src="https://img.shields.io/badge/License-Apache-blue.svg"
-    alt="Apache2-badge"></img>
+        <img src="https://img.shields.io/badge/License-Apache-blue.svg"
+        alt="Apache2-badge"></img>
   `;
   }
   else if (license == 'GPL') {
     return `
-    <img src="https://img.shields.io/badge/License-GPL-blue.svg"
-    alt="GPL-badge"></img>
+        <img src="https://img.shields.io/badge/License-GPL-blue.svg"
+        alt="GPL-badge"></img>
   `;
   } else {
     return "";
@@ -124,7 +124,7 @@ function generateMarkdown(readmeData) {
         <h2>Contributing</h2>
         <p>${readmeData.contributionGuidelines}</p>
       </div>
-      <div id="test">
+      <div id="tests">
         <h2>Tests</h2>
         <p>${readmeData.testInstructions}</p>
       </div>
