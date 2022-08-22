@@ -6,13 +6,18 @@ const fs = require('fs');
 // const questions = [];
 
 
-const profileDataArgs = process.argv.slice(2);
+// const profileDataArgs = process.argv.slice(2);
 
-const [name, github] = profileDataArgs;
+// const [name, github] = profileDataArgs;
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    // const generatePage = (name, github) => {
+    const generatePage = readmeData => {
+        // const {contactInfo, ...header} = readmeData;
+        // console.log(header.name);
+        // console.log(header.description);
+        // console.log(header.installationInstructions);
+        // console.log(contactInfo.github);
     return `
     <!DOCTYPE html> 
     <html lang="en"> 
@@ -24,11 +29,73 @@ function writeToFile(fileName, data) {
     </head>
   
     <body>
-      <h1>${fileName}</h1>
-      <h2><a href="https://github.com/${data}">Github</a></h2>
+      <h1>${readmeData.name}</h1>
+      </header>
+
+      <main>
+        <div>
+          <h2>Description</h2>
+          <p>${readmeData.description}</p>
+        </div>
+        <div>
+          <h2>Table of Contents</h2>
+          <ul>
+            <li>
+              <a href="#">Installation</a>
+            </li>
+            <li>
+              <a href="#">Usage</a>
+            </li>
+            <li>
+              <a href="#">License</a>
+            </li>
+            <li>
+              <a href="#">Contributing</a>
+            </li>
+            <li>
+              <a href="#">Tests</a>
+            </li>
+            <li>
+              <a href="#">Questions</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Installation</h2>
+          <p>${readmeData.installationInstructions}</p>
+        </div>
+        <div>
+          <h2>Usage</h2>
+          <p>${readmeData.usageInformation}</p>
+        </div>
+        <div>
+          <h2>License</h2>
+          <p></p>
+        </div>
+        <div>
+          <h2>Contributing</h2>
+          <p>${readmeData.contributionGuidelines}</p>
+        </div>
+        <div>
+          <h2>Tests</h2>
+          <p>${readmeData.testInstructions}</p>
+        </div>
+        <div>
+          <h2>Questions</h2>
+          <p>Github: ${readmeData.contactInfo.github} & Email: ${readmeData.contactInfo.email}</p>
+        </div>
+      </main>
     </body>
+
     </html>
     `;
+    }
+
+    fs.writeFile(fileName, generatePage(data), err => {
+    if (err) throw err;
+
+    console.log('Portfolio complete! Check out index.html to see the output!');
+});
 }
 
 // TODO: Create a function to initialize app
@@ -154,16 +221,12 @@ function init() {
 
     promptProject()
         .then(promptUser)
-        .then(projectData => {
-            console.log(projectData);
+        .then(readmeData => {
+            console.log(readmeData);
+            writeToFile('index.html', readmeData);
         });
 
 }
 
 // Function call to initialize app
 init();
-// fs.writeFile('index.html', writeToFile(name, github), err => {
-//     if (err) throw err;
-
-//     console.log('Portfolio complete! Check out index.html to see the output!');
-// });
