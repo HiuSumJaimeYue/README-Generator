@@ -152,7 +152,7 @@ function init() {
         .then(promptUser)
         .then(readmeData => {
             console.log(readmeData);
-            writeToFile('index.html', readmeData);
+            writeToFile('README.md', readmeData);
         });
 
 }
