@@ -18,8 +18,8 @@ Video of demonstration: https://drive.google.com/file/d/1Vw3jDuXp4lhCOWYKELMNt7H
 
 Screenshots of the application is included below.   
 Preview                 
-![README Generator Preview1](web "README-Preview1")  
-![README Generator Preview2](web "README-Preview2")  
+![README Generator Preview1](https://github.com/HiuSumJaimeYue/README-Generator/blob/main/Screenshots/README-Preview1.jpg "README-Preview1")  
+![README Generator Preview2](https://github.com/HiuSumJaimeYue/README-Generator/blob/main/Screenshots/README-Preview2.jpg "README-Preview2")  
 Raw code            
-![README Generator Preview3](web "README-Preview3")  
-![README Generator Preview4](web "README-Preview4")  
+![README Generator Preview3](https://github.com/HiuSumJaimeYue/README-Generator/blob/main/Screenshots/README-Preview3.jpg "README-Preview3")  
+![README Generator Preview4](https://github.com/HiuSumJaimeYue/README-Generator/blob/main/Screenshots/README-Preview4.jpg "README-Preview4")  
