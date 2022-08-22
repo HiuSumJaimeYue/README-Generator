@@ -4,6 +4,26 @@ function renderLicenseBadge(license) {
   if (!license) {
     return '';
   }
+  if (license == 'MIT') {
+    return `
+        <img src="https://img.shields.io/badge/License-MIT-green.svg"
+        alt="MIT-badge"></img>
+    `;
+  }
+  else if (license == 'Apache 2.0') {
+    return `
+    <img src="https://img.shields.io/badge/License-Apache-blue.svg"
+    alt="Apache2-badge"></img>
+  `;
+  }
+  else if (license == 'GPL') {
+    return `
+    <img src="https://img.shields.io/badge/License-GPL-blue.svg"
+    alt="GPL-badge"></img>
+  `;
+  } else {
+    return "";
+  }
 }
 
 // Create a function that returns the license link
@@ -12,13 +32,15 @@ function renderLicenseLink(license) {
   if (!license) {
     return '';
   }
-  if(license == 'MIT'){
-    return "";
+  if (license == 'MIT') {
+    return "https://choosealicense.com/licenses/mit/";
   }
-  else if(license == 'Apache'){
-    return "";
+  else if (license == 'Apache 2.0') {
+    return "https://choosealicense.com/licenses/apache-2.0/";
   }
-  else if(license == 'GPL'){
+  else if (license == 'GPL') {
+    return "https://choosealicense.com/licenses/gpl-3.0/";
+  } else {
     return "";
   }
 }
@@ -30,10 +52,10 @@ function renderLicenseSection(license) {
     return '';
   }
   return ` 
-  <p>Licensed under the 
-  <a href=${renderLicenseLink(license)}>${license}</a>
-   license.</p>
-  <p>${renderLicenseBadge(license)}</p>
+        <p>Licensed under the 
+        <a href=${renderLicenseLink(license)} target="_blank" rel="noopener noreferrer">
+        ${license}</a>
+        license.</p>
 `;
 }
 
@@ -54,7 +76,7 @@ function generateMarkdown(readmeData) {
   </head>
 
   <body>
-    <h1>${readmeData.name}</h1>
+    <h1>${readmeData.name} · ${renderLicenseBadge(readmeData.license)}</h1>
     </header>
 
     <main>
@@ -110,7 +132,11 @@ function generateMarkdown(readmeData) {
         <h2>Questions</h2>
         <p>If you have any questions about the project, 
         the github link and email address of the author are shown below. </p>
-        <p>Github: <a href="https://github.com/${readmeData.contactInfo.github}">GitHub</a> & Email: ${readmeData.contactInfo.email}</p>
+        <p>Github: <a href="https://github.com/${readmeData.contactInfo.github}" 
+        target="_blank" rel="noopener noreferrer" >
+        GitHub</a> & Email: <a href="mailto:${readmeData.contactInfo.email}">
+        ${readmeData.contactInfo.email}
+      </a></p>
       </div>
     </main>
   </body>

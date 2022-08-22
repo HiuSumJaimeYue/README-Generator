@@ -81,7 +81,7 @@ function init() {
                 type: 'list',
                 name: 'license',
                 message: 'Choose a license for this project',
-                choices: ['MIT', 'Apache' ,'GPL']
+                choices: ['MIT', 'Apache 2.0' ,'GPL']
             }, {
                 type: 'input',
                 name: 'contributionGuidelines',
